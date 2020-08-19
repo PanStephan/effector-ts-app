@@ -2,10 +2,9 @@
   "compilerOptions": {
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
-    "rootDir": "./",
-    "outDir": "dist",
     "module": "commonjs",
     "target": "es5",
+    "outDir": "./built",
     "sourceMap": true,
     "allowJs": true,
     "moduleResolution": "node",
@@ -17,6 +16,9 @@
   },
   "exclude": [
     "node_modules",
-    "build"
+    "build",
+  ],
+  "include": [
+    "src/**/*"
   ]
 }

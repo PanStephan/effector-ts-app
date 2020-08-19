@@ -4,11 +4,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js --watch",
-    "serve": "nodemon --exec ts-node index.ts --ignore client"
+    "serve": "nodemon --exec ts-node ./src/server/server.ts --ignore client"
   },
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "effector": "^21.2.2",
+    "effector-react": "^21.0.4",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
