@@ -2,17 +2,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
-module.exports = {
-  context: path.resolve(__dirname, 'src'),
+const config = {
   entry: './client/index.tsx',
-  output: {
-    filename: `main.[hash].js`, 
-    path: path.resolve(__dirname, './dist'),
-  },
   watchOptions: {
     ignored: /node_modules/
   },
-  mode: 'development',
+  context: path.resolve(__dirname, 'src'),
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
@@ -43,3 +38,8 @@ module.exports = {
     }),
   ]
 }
+
+// avoid ts overload
+config.mode = 'development'
+
+module.exports = config
